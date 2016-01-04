@@ -1,4 +1,4 @@
-package com.catalyst.collector.controllers;
+package com.catalyst.spacedout.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.catalyst.collector.entities.TestData;
-import com.catalyst.collector.services.TestDataService;
+import com.catalyst.spacedout.entities.TestData;
+import com.catalyst.spacedout.services.TestDataService;
 
 @RestController
 public class TestDataController {

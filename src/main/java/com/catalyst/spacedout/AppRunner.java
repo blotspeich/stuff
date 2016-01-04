@@ -1,4 +1,4 @@
-package com.catalyst.collector;
+package com.catalyst.spacedout;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

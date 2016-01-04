@@ -1,10 +1,10 @@
-package com.catalyst.collector.daos.hibernate;
+package com.catalyst.spacedout.services.impl;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TestDataDaoHibernateTest {
+public class TestDataServiceImplTest {
 
 	@Test
 	public void test() {
