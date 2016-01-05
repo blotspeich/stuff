@@ -23,4 +23,19 @@ public class VehicleServiceImpl implements VehicleService {
 	public List<Vehicle> getVehicle() {
 		return vehicleDao.getVehicle();
 	}
+
+	@Override
+	public void addVehicle(Vehicle vehicle) {
+		vehicleDao.addVehicle(vehicle);
+	}
+
+	@Override
+	public void updateVehicle(Vehicle vehicle) {
+		vehicleDao.updateVehicle(vehicle);
+	}
+
+	@Override
+	public void deleteVehicle(Integer vehicleId) {
+		vehicleDao.deleteVehicle(vehicleId);
+	}
 }

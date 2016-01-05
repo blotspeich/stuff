@@ -1,0 +1,1 @@
+Create a project database named "finalproject". No special requirements.
