@@ -24,7 +24,27 @@ public class CustomerDaoHibernate implements CustomerDao {
 	
 	@Override
 	public List<Customer> getCustomer() {
-		return em.createQuery("SELECT t FROM Customer t", Customer.class).getResultList();
+		return em.createQuery("SELECT c FROM Customer c", Customer.class).getResultList();
+	}
+	
+	@Override
+	public void addCustomer(Customer customer) {
+		em.persist(customer);
+	}
+	
+	@Override
+	public void updateCustomer(Customer customer) {
+		em.merge(customer);
+	}
+	
+	@Override
+	public void deleteCustomer(int customerId) {
+		Customer customer = getCustomerById(customerId);
+		em.remove(customer);
+	}
+	
+	public Customer getCustomerById(int customerId){
+		return em.createQuery("SELECT c FROM Customer c WHERE c.customerId = :ID", Customer.class).setParameter("CUSTOMERID", customerId).getSingleResult();
 	}
 
 }

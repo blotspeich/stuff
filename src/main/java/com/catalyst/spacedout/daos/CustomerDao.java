@@ -7,4 +7,10 @@ import com.catalyst.spacedout.entities.Customer;
 public interface CustomerDao {
 
 	public List<Customer> getCustomer();
+	
+	void addCustomer(Customer customer);
+	
+	void updateCustomer(Customer customer);
+	
+	void deleteCustomer(int customerId);
 }

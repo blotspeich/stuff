@@ -1,5 +1,6 @@
 package com.catalyst.spacedout.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,8 +11,9 @@ public class Customer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int customerId;
+	private Integer customerId;
 	
+	@Column(nullable = false)
 	private String firstName;
 
 	public int getCustomerId() {
