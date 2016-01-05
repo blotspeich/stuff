@@ -1,1 +1,1 @@
-INSERT INTO customer (firstName) VALUES ('Test');
+INSERT INTO customer (firstName) VALUES ('Tommy');

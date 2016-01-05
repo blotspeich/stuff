@@ -38,13 +38,13 @@ public class CustomerDaoHibernate implements CustomerDao {
 	}
 	
 	@Override
-	public void deleteCustomer(int customerId) {
+	public void deleteCustomer(Integer customerId) {
 		Customer customer = getCustomerById(customerId);
 		em.remove(customer);
 	}
 	
-	public Customer getCustomerById(int customerId){
-		return em.createQuery("SELECT c FROM Customer c WHERE c.customerId = :ID", Customer.class).setParameter("CUSTOMERID", customerId).getSingleResult();
+	public Customer getCustomerById(Integer customerId){
+		return em.createQuery("SELECT c FROM Customer c WHERE c.customerId = :ID", Customer.class).setParameter("customerId", customerId).getSingleResult();
 	}
 
 }
