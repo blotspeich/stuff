@@ -1,0 +1,10 @@
+body {
+	background-image: url("../images/bkg.jpg");
+	background-size: 100%;
+	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+	color: white;
+}
+
+input {
+	color:black;
+}
