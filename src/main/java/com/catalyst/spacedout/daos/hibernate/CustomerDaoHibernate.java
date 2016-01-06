@@ -44,6 +44,6 @@ public class CustomerDaoHibernate implements CustomerDao {
 	}
 	
 	public Customer getCustomerById(Integer customerId){
-		return em.createQuery("SELECT c FROM Customer c WHERE c.customerId = :ID", Customer.class).setParameter("customerId", customerId).getSingleResult();
+		return em.createQuery("SELECT c FROM Customer c WHERE c.customerId = :customerId", Customer.class).setParameter("customerId", customerId).getSingleResult();
 	}
 }
