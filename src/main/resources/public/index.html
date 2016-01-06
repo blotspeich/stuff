@@ -4,13 +4,33 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	
 	<script src="js/app.js"></script>
-		<title>Welcome to Spaced Out</title>
+	<script src="js/routes/routes.js"></script>
+	<script src="js/factories/customerFactory.js"></script>
+	<script src="js/factories/monthlyPassFactory.js"></script>
+	<script src="js/factories/vehicleFactory.js"></script>
+	<script src="js/controllers/addPassController.js"></script>
+	<script src="js/controllers/editPassController.js"></script>
+	<script src="js/controllers/viewPassesController.js"></script>
+		
+	<title>Welcome to Spaced Out</title>
 </head>
-<body ng-app="spacedOutApp">
+<body ng-app="spacedOut">
+	
+	<nav class="navbar navbar-default navbar-static-top">
+  		<div class="container">
+    		<ul class="nav nav-tabs nav-justified">
+				<li><a ui-sref="/viewPasses">View</a></li>
+				<li><a ui-sref="/addPass">Add</a></li>
+				<li><a ui-sref="/editPass">Edit</a></li>
+			</ul>
+  		</div>
+	</nav>
+	
 	<h1>stuff</h1>
 	<ui-view></ui-view>
 </body>
