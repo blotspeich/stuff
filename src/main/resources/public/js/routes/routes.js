@@ -7,14 +7,17 @@ angular.module('spacedOut')
 
 	$stateProvider.state('viewPasses', {
 		url: '/viewPasses', 
-		templateUrl: 'templates/viewPasses.tpl.html'
+		templateUrl: 'templates/viewPasses.tpl.html',
+		controller: 'viewPassesController'
 	}) 
      .state('addPass', {
     	url: '/addPass',
-    	templateUrl: 'templates/addPass.tpl.html'
+    	templateUrl: 'templates/addPass.tpl.html',
+    	controller: 'addPassController'
     })
 	.state('editPass', { 
         url: '/editPass',
-        templateUrl: 'templates/editPass.tpl.html'
+        templateUrl: 'templates/editPass.tpl.html',
+        controller: 'editPassController'
     }); 
 }]);
