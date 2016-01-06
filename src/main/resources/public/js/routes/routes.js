@@ -19,5 +19,5 @@ angular.module('spacedOut')
         url: '/editPass',
         templateUrl: 'templates/editPass.tpl.html',
         controller: 'editPassController'
-    }); 
+    });
 }]);
