@@ -5,6 +5,9 @@ angular.module('spacedOut').factory('monthlyPassFactory', ['$http', function($ht
 		},
 		getMonthlyPassById : function(passId){
 			return $http.get('/monthlyPass/' + passId);
+		},
+		addMonthlyPass : function(monthlyPass) {
+			return $http.post('/monthlyPass', monthlyPass);
 		}
 	}
-}])
+}]);

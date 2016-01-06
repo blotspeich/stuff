@@ -16,7 +16,7 @@ public class MonthlyPass {
 	private Integer passId;
 	
 	@Column(nullable = false)
-	private BigDecimal passPrice;
+	private Double passPrice;
 
 	public Integer getPassId() {
 		return passId;
@@ -26,11 +26,11 @@ public class MonthlyPass {
 		this.passId = passId;
 	}
 
-	public BigDecimal getPassPrice() {
+	public Double getPassPrice() {
 		return passPrice;
 	}
 
-	public void setPassPrice(BigDecimal passPrice) {
+	public void setPassPrice(Double passPrice) {
 		this.passPrice = passPrice;
 	}
 	

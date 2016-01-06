@@ -1,1 +1,10 @@
-<h1>Place passes here</h1>
+ <h1>Current Passes</h1>
+ <table class="table table-bordered table-striped">
+    
+    <thead>
+     <tbody>
+     	<tr ng-repeat="pass in passList">
+     		<td>{{pass.passPrice}}</td>
+     	</tr>
+     </tbody>
+    </thead>
