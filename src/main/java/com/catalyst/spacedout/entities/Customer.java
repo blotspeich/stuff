@@ -1,10 +1,13 @@
 package com.catalyst.spacedout.entities;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 @Entity
 public class Customer {
@@ -15,6 +18,7 @@ public class Customer {
 	
 	@Column(nullable = false)
 	private String firstName;
+	
 	
 	public Integer getCustomerId() {
 		return customerId;

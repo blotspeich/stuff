@@ -9,7 +9,7 @@ angular.module('spacedOut').factory('monthlyPassFactory', ['$http', function($ht
 		addMonthlyPass : function(monthlyPass) {
 			return $http.post('/monthlyPass', monthlyPass);
 		},
-		deleteMonthlyPass : function(monthlyPass) {
+		deleteMonthlyPass : function(passId) {
 			return $http.delete('/monthlyPass/' + passId);
 		}
 	}
