@@ -9,7 +9,6 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import com.catalyst.spacedout.daos.MonthlyPassDao;
-import com.catalyst.spacedout.entities.Customer;
 import com.catalyst.spacedout.entities.MonthlyPass;
 
 @Repository
@@ -45,8 +44,6 @@ public class MonthlyPassDaoHibernate implements MonthlyPassDao {
 	}
 	
 	public MonthlyPass getMonthlyPassById(Integer passId){
-		return em.createQuery("SELECT m FROM MonthlyPass m WHERE m.passId = :ID", MonthlyPass.class).setParameter("passId", passId).getSingleResult();
+		return em.createQuery("SELECT m FROM MonthlyPass m WHERE m.passId = :passId", MonthlyPass.class).setParameter("passId", passId).getSingleResult();
 	}
-
-
 }

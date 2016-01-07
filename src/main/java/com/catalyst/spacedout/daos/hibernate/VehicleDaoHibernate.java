@@ -44,6 +44,6 @@ public class VehicleDaoHibernate implements VehicleDao {
 	}
 	
 	public Vehicle getVehicleById(Integer vehicleId){
-		return em.createQuery("SELECT v FROM Vehicle v WHERE v.vehicleId = :ID", Vehicle.class).setParameter("vehicleId", vehicleId).getSingleResult();
+		return em.createQuery("SELECT v FROM Vehicle v WHERE v.vehicleId = :vehicleId", Vehicle.class).setParameter("vehicleId", vehicleId).getSingleResult();
 	}	
 }

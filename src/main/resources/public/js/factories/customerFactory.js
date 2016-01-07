@@ -5,6 +5,9 @@ angular.module('spacedOut').factory('customerFactory', ['$http', function($http)
 		},
 		getCustomerById : function(customerId){
 			return $http.get('/customer/' + customerId);
+		},
+		addCustomer : function(customer) {
+			return $http.post('/customer', customer);
 		}
 	}
-}])
+}]);
