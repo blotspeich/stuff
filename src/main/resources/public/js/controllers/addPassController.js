@@ -5,6 +5,8 @@ angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyP
 		
 	$scope.monthlyPass = {};
 	$scope.monthlyPass.passPrice = '';
+	$scope.monthlyPass.customer = {};
+	$scope.monthlyPass.customer.customerId = '';
 	
 	$scope.createMonthlyPass = function() {
 		$scope.data = JSON.stringify($scope.monthlyPass);

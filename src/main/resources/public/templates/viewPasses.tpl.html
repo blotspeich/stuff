@@ -8,10 +8,12 @@
      	<tr>
      		<td>Pass Id</td>
      		<td>Pass Price</td>
+     		<td>Customer ID</td>
      	</tr>
      	<tr ng-repeat="pass in passList">
      		<td>{{pass.passId}}</td>
      		<td>{{pass.passPrice}}</td>
+     		<td>{{pass.customer.customerId}}</td>
      	</tr>
      </tbody>
     
