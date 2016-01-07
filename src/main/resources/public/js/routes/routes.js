@@ -28,11 +28,11 @@ angular.module('spacedOut')
     .state('addCustomer', {
     	url: '/addCustomer',
     	templateUrl: 'templates/addPass.tpl.html',
-    	controller: 'addCustomerController'
+    	controller: 'addPassController'
     })
     .state('viewCustomers', {
     	url: '/viewCustomers',
     	templateUrl: 'templates/viewPasses.tpl.html',
-    	controller: 'viewCustomersController'
+    	controller: 'viewPassesController'
     });
 }]);
