@@ -4,7 +4,12 @@
     
     <thead>
      <tbody>
+     	<tr>
+     		<td>Pass Id</td>
+     		<td>Pass Price</td>
+     	</tr>
      	<tr ng-repeat="pass in passList">
+     		<td>{{pass.passId}}</td>
      		<td>{{pass.passPrice}}</td>
      	</tr>
      </tbody>

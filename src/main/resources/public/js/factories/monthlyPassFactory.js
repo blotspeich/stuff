@@ -8,6 +8,9 @@ angular.module('spacedOut').factory('monthlyPassFactory', ['$http', function($ht
 		},
 		addMonthlyPass : function(monthlyPass) {
 			return $http.post('/monthlyPass', monthlyPass);
+		},
+		deleteMonthlyPass : function(monthlyPass) {
+			return $http.delete('/monthlyPass/' + passId);
 		}
 	}
 }]);

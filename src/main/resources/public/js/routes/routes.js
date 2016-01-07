@@ -19,5 +19,10 @@ angular.module('spacedOut')
         url: '/editPass',
         templateUrl: 'templates/editPass.tpl.html',
         controller: 'editPassController'
+    })
+    .state('deletePass', {
+    	url: '/deletePass',
+    	templateUrl: 'templates/deletePass.tpl.html',
+    	controller: 'deletePassController'
     });
 }]);
