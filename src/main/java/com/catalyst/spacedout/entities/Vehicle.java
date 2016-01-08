@@ -13,6 +13,9 @@ public class Vehicle {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer vehicleId;
 	
+	@Column(nullable = false)
+	private String vehicleMake;
+
 	public Integer getVehicleId() {
 		return vehicleId;
 	}
@@ -28,9 +31,4 @@ public class Vehicle {
 	public void setVehicleMake(String vehicleMake) {
 		this.vehicleMake = vehicleMake;
 	}
-
-	@Column(nullable = false)
-	private String vehicleMake;
-
-	
 }

@@ -1,12 +1,14 @@
 'use strict';
 
-angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyPassFactory', 'customerFactory', 
-	function($scope, monthlyPassFactory, customerFactory){
+angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyPassFactory', 'customerFactory', 'vehicleFactory',
+	function($scope, monthlyPassFactory, customerFactory, vehicleFactory){
 		
 	$scope.monthlyPass = {};
 	$scope.monthlyPass.passPrice = '';
 	$scope.monthlyPass.customer = {};
 	$scope.monthlyPass.customer.customerId = '';
+	$scope.monthlyPass.vehicle = {};
+	$scope.monthlyPass.vehicle.vehicleId = '';
 	
 	$scope.createMonthlyPass = function() {
 		$scope.data = JSON.stringify($scope.monthlyPass);
@@ -32,5 +34,19 @@ angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyP
 					$scope.result = error;
 				});
 		};
+		
+		$scope.vehicle = {};
+		$scope.vehicle.vehicleMake = '';
+
+		$scope.createVehicle = function() {
+			$scope.data = JSON.stringify($scope.vehicle);
+			vehicleFactory.addVehicle($scope.data).then(
+					function(success) {
+						$scope.result = success;
+						
+					}, function(error) {
+						$scope.result = error;
+					});
+			};
 	
 }]);

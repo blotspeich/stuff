@@ -1,1 +1,16 @@
-<h1>Edit passes here</h1>
+<div class="pull-left">
+	<form name ="addPassForm">
+		<input type="text" ng-model="monthlyPass.passPrice" placeholder="Enter Pass Price"/>
+		<br />
+		<input type="text" ng-model="monthlyPass.customer.customerId" placeholder="Enter Customer ID"/>
+		<br />
+		<button ng-click='createMonthlyPass()' class="btn btn-primary" type="submit">Add Pass</button>
+	</form>
+</div>
+<div class="pull-right">
+	<form name ="addCustomerForm">
+		<input type="text" ng-model="customer.firstName" placeholder="Enter First Name"/>
+		<br />	
+		<button ng-click='createCustomer()' class="btn btn-primary" type="submit">Add New Customer</button>
+	</form>
+</div>

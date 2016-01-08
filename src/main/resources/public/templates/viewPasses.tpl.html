@@ -8,11 +8,14 @@
      	<tr>
      		<td>Pass Id</td>
      		<td>Pass Price</td>
+     		<td>Vehicle ID</td>
      		<td>Customer ID</td>
+     		
      	</tr>
      	<tr ng-repeat="pass in passList">
      		<td>{{pass.passId}}</td>
      		<td>{{pass.passPrice}}</td>
+     		<td>{{pass.vehicle.vehicleId}}</td>
      		<td>{{pass.customer.customerId}}</td>
      	</tr>
      </tbody>
@@ -20,11 +23,31 @@
   </table>
 </div>
 
+<div id="viewVehicles">
+
+ <table class="table table-bordered">
+     <thead>
+     <h1>Vehicles</h1>
+    </thead>
+     <tbody>
+     	<tr>
+     		<td>Vehicle Id</td>
+     		<td>Vehicle Make</td>
+     	</tr>
+     	<tr ng-repeat="vehicle in vehicleList">
+     		<td>{{vehicle.vehicleId}}</td>
+     		<td>{{vehicle.vehicleMake}}</td>
+     	</tr>
+     </tbody>
+    
+    </table>
+</div>
+
 <div id="viewCustomers">
 
  <table class="table table-bordered">
      <thead>
-     <h1>Current Customers</h1>
+     <h1>Customers</h1>
     </thead>
      <tbody>
      	<tr>

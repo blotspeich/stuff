@@ -9,8 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-
-
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
@@ -27,7 +25,10 @@ public class MonthlyPass {
 	@JoinColumn
 	private Customer customer;
 	
-	
+	@NotNull
+	@OneToOne (cascade = {CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER)
+	@JoinColumn
+	private Vehicle vehicle;
 	
 	public Customer getCustomer() {
 		return customer;
@@ -54,6 +55,14 @@ public class MonthlyPass {
 
 	public void setPassPrice(Double passPrice) {
 		this.passPrice = passPrice;
+	}
+
+	public Vehicle getVehicle() {
+		return vehicle;
+	}
+
+	public void setVehicle(Vehicle vehicle) {
+		this.vehicle = vehicle;
 	}
 	
 

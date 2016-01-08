@@ -34,5 +34,15 @@ angular.module('spacedOut')
     	url: '/viewCustomers',
     	templateUrl: 'templates/viewPasses.tpl.html',
     	controller: 'viewPassesController'
+    })
+    .state('addVehicle', {
+    	url: '/addVehicle',
+    	templateUrl: 'templates/addPass.tpl.html',
+    	controller: 'addPassController'
+    })
+    .state('viewVehicles', {
+    	url: '/viewVehicles',
+    	templateUrl: 'templates/viewPasses.tpl.html',
+    	controller: 'viewPassesController'
     });
 }]);

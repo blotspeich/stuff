@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('spacedOut').controller('viewPassesController', ['$scope', 'monthlyPassFactory', 'customerFactory', 
-function($scope, monthlyPassFactory, customerFactory){
+angular.module('spacedOut').controller('viewPassesController', ['$scope', 'monthlyPassFactory', 'customerFactory', 'vehicleFactory', 
+function($scope, monthlyPassFactory, customerFactory, vehicleFactory){
 	
 	$scope.getPassList = function(){
 		monthlyPassFactory.getMonthlyPasses().then(
@@ -17,9 +17,6 @@ function($scope, monthlyPassFactory, customerFactory){
 	$scope.getPassList();
 	
 	
-
-
-	
 	$scope.getCustomerList = function(){
 		customerFactory.getCustomers().then(
 			
@@ -32,6 +29,20 @@ function($scope, monthlyPassFactory, customerFactory){
 			});
 	};
 	$scope.getCustomerList();
+	
+	
+	$scope.getVehicleList = function(){
+		vehicleFactory.getVehicles().then(
+			
+			function(success) {
+				$scope.vehicleList = success.data;
+				console.log($scope.vehicleList);
+			},
+			function(error) {
+				$scope.vehicleList = error.data;
+			});
+	};
+	$scope.getVehicleList();
 	
 	
 }])

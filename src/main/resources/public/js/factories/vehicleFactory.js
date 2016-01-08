@@ -5,6 +5,9 @@ angular.module('spacedOut').factory('vehicleFactory', ['$http', function($http) 
 		},
 		getVehicleById : function(vehicleId){
 			return $http.get('/vehicle/' + vehicleId);
+		},
+		addVehicle : function(vehicle) {
+			return $http.post('/vehicle', vehicle);
 		}
 	}
 }])
