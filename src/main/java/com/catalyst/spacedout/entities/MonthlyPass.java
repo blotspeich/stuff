@@ -12,6 +12,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 @Entity
 public class MonthlyPass {
@@ -75,6 +79,4 @@ public class MonthlyPass {
 	public void setVehicle(Vehicle vehicle) {
 		this.vehicle = vehicle;
 	}
-	
-
 }

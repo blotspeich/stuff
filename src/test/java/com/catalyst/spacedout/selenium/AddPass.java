@@ -1,11 +1,18 @@
 package com.catalyst.spacedout.selenium;
 
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -33,7 +40,21 @@ private WebDriver driver;
 		
 		new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("navbarViewButton"))).click();
 		
+		new WebDriverWait(driver, 3000).until(new ExpectedCondition<Boolean>(){
+			public Boolean apply(WebDriver d) {
+				return d.findElement(By.id("Current_Passes")).getAttribute("value").equals("Current Passes");
+			}
+		});
 		
+		boolean passIsPresent = false;
+		List<WebElement> passes = new ArrayList<>();
+		passes.addAll(driver.findElements(By.className("ng-binding")));
+		for(int i=0; i<passes.size(); i++){
+			if(passes.get(i).getAttribute("value").equals("33.99")){
+				passIsPresent = true;
+			}
+		}
+		assertTrue(passIsPresent);
 	}
 	
 	@After
