@@ -1,14 +1,14 @@
 <div class="pull-left">
 	<form name ="addPassForm">
-		<input type="text" ng-model="monthlyPass.passPrice" placeholder="Enter Pass Price"/>
+		<input id="priceInput" type="text" ng-model="monthlyPass.passPrice" placeholder="Enter Pass Price"/>
 		<br />
-		<input type="text" ng-model="monthlyPass.vehicle.vehicleId" placeholder="Enter Vehicle ID" />
+		<input id="vehicleIdInput" type="text" ng-model="monthlyPass.vehicle.vehicleId" placeholder="Enter Vehicle ID" />
 		<br />
-		<input type="text" ng-model="monthlyPass.customer.customerId" placeholder="Enter Customer ID"/>
+		<input id="customerIdInput" type="text" ng-model="monthlyPass.customer.customerId" placeholder="Enter Customer ID"/>
 		<br />
-		<input type="text" ng-model="monthlyPass.expirationDate" placeholder="Enter Expiration Date"/>
+		<input id="expirationInput" type="text" ng-model="monthlyPass.expirationDate" placeholder="Enter Expiration Date"/>
 		<br />
-		<button ng-click='createMonthlyPass()' class="btn btn-primary" type="submit">Add Pass</button>
+		<button id="addPassSubmitButton" ng-click='createMonthlyPass()' class="btn btn-primary" type="submit">Add Pass</button>
 	</form>
 </div>
 
