@@ -23,6 +23,9 @@ angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyP
 		
 	$scope.customer = {};
 	$scope.customer.firstName = '';
+	$scope.customer.lastName = '';
+	$scope.customer.phoneNumber = '';
+	$scope.customer.emailAddress = '';
 
 	$scope.createCustomer = function() {
 		$scope.data = JSON.stringify($scope.customer);

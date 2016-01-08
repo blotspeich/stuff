@@ -23,7 +23,13 @@
 <div class="pull-right">
 	<form name ="addCustomerForm">
 		<input type="text" ng-model="customer.firstName" placeholder="Enter First Name"/>
+		<br />
+		<input type="text" ng-model="customer.lastName" placeholder="Enter Last Name"/>
 		<br />	
+		<input type="text" ng-model="customer.phoneNumber" placeholder="Enter Phone Number"/>
+		<br />
+		<input type="tet" ng-model="customer.emailAddress" placeholder="Enter Email Address"/>
+		<br />
 		<button ng-click='createCustomer()' class="btn btn-primary" type="submit">Add New Customer</button>
 	</form>
 </div>

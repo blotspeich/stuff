@@ -16,6 +16,39 @@ public class Customer {
 	@Column(nullable = false)
 	private String firstName;
 	
+	@Column(nullable = false)
+	private String lastName;
+	
+	@Column(nullable = false)
+	private Double phoneNumber;
+	
+	@Column(nullable = false)
+	private String emailAddress;
+	
+	public Double getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(Double phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
 	public Integer getCustomerId() {
 		return customerId;
 	}
