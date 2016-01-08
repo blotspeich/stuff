@@ -30,6 +30,17 @@ public class MonthlyPass {
 	@JoinColumn
 	private Vehicle vehicle;
 	
+	@Column(nullable = false)
+	private String expirationDate;
+	
+	public String getExpirationDate() {
+		return expirationDate;
+	}
+
+	public void setExpirationDate(String expirationDate) {
+		this.expirationDate = expirationDate;
+	}
+
 	public Customer getCustomer() {
 		return customer;
 	}

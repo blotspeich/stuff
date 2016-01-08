@@ -9,6 +9,7 @@ angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyP
 	$scope.monthlyPass.customer.customerId = '';
 	$scope.monthlyPass.vehicle = {};
 	$scope.monthlyPass.vehicle.vehicleId = '';
+	$scope.monthlyPass.expirationDate = '';
 	
 	$scope.createMonthlyPass = function() {
 		$scope.data = JSON.stringify($scope.monthlyPass);
@@ -40,6 +41,10 @@ angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyP
 		
 		$scope.vehicle = {};
 		$scope.vehicle.vehicleMake = '';
+		$scope.vehicle.vehicleModel = '';
+		$scope.vehicle.licenseNumber = '';
+		$scope.vehicle.licenseState = '';
+		$scope.vehicle.vehicleColor = '';
 
 		$scope.createVehicle = function() {
 			$scope.data = JSON.stringify($scope.vehicle);

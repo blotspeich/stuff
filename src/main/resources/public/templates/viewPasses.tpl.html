@@ -10,6 +10,7 @@
      		<td>Pass Price</td>
      		<td>Vehicle ID</td>
      		<td>Customer ID</td>
+     		<td>Expiration Date</td>
      		
      	</tr>
      	<tr ng-repeat="pass in passList">
@@ -17,6 +18,7 @@
      		<td>{{pass.passPrice}}</td>
      		<td>{{pass.vehicle.vehicleId}}</td>
      		<td>{{pass.customer.customerId}}</td>
+     		<td>{{pass.expirationDate}}</td>
      	</tr>
      </tbody>
     
@@ -33,10 +35,18 @@
      	<tr>
      		<td>Vehicle Id</td>
      		<td>Vehicle Make</td>
+     		<td>Vehicle Model</td>
+     		<td>License Number</td>
+     		<td>License State</td>
+     		<td>Vehicle Color</td>
      	</tr>
      	<tr ng-repeat="vehicle in vehicleList">
      		<td>{{vehicle.vehicleId}}</td>
      		<td>{{vehicle.vehicleMake}}</td>
+     		<td>{{vehicle.vehicleModel}}</td>
+     		<td>{{vehicle.licenseNumber}}</td>
+     		<td>{{vehicle.licenseState}}</td>
+     		<td>{{vehicle.vehicleColor}}</td>
      	</tr>
      </tbody>
     
