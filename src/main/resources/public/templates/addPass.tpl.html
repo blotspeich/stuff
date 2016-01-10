@@ -14,30 +14,30 @@
 
 <div class="pull-right">
 	<form name ="addVehicleForm">
-		<input type="text" ng-model="vehicle.vehicleMake" placeholder="Enter Vehicle Make"/>
+		<input id="makeInput" type="text" ng-model="vehicle.vehicleMake" placeholder="Enter Vehicle Make"/>
 		<br />	
-		<input type="text" ng-model="vehicle.vehicleModel" placeholder="Enter Vehicle Model"/>
+		<input id="modelInput" type="text" ng-model="vehicle.vehicleModel" placeholder="Enter Vehicle Model"/>
 		<br />
-		<input type="text" ng-model="vehicle.licenseNumber" placeholder="Enter License Number"/>
+		<input id ="licenseNumberInput" type="text" ng-model="vehicle.licenseNumber" placeholder="Enter License Number"/>
 		<br />
-		<input type="text" ng-model="vehicle.licenseState" placeholder="Enter License State"/>
+		<input id = "licenseStateInput" type="text" ng-model="vehicle.licenseState" placeholder="Enter License State"/>
 		<br />
-		<input type="text" ng-model="vehicle.vehicleColor" placeholder="Enter Vehicle Color"/>
+		<input id = "colorInput" type="text" ng-model="vehicle.vehicleColor" placeholder="Enter Vehicle Color"/>
 		<br />
-		<button ng-click='createVehicle()' class="btn btn-primary" type="submit">Add New Vehicle</button>
+		<button id = "addVehicleSubmitButton" ng-click='createVehicle()' class="btn btn-primary" type="submit">Add New Vehicle</button>
 	</form>
 </div>
 
 <div class="pull-right">
 	<form name ="addCustomerForm">
-		<input type="text" ng-model="customer.firstName" placeholder="Enter First Name"/>
+		<input id="firstNameInput" type="text" ng-model="customer.firstName" placeholder="Enter First Name"/>
 		<br />
-		<input type="text" ng-model="customer.lastName" placeholder="Enter Last Name"/>
+		<input id="lastNameInput" type="text" ng-model="customer.lastName" placeholder="Enter Last Name"/>
 		<br />	
-		<input type="text" ng-model="customer.phoneNumber" placeholder="Enter Phone Number"/>
+		<input id="phoneNumberInput" type="text" ng-model="customer.phoneNumber" placeholder="Enter Phone Number"/>
 		<br />
-		<input type="tet" ng-model="customer.emailAddress" placeholder="Enter Email Address"/>
+		<input id="emailInput" type="tet" ng-model="customer.emailAddress" placeholder="Enter Email Address"/>
 		<br />
-		<button ng-click='createCustomer()' class="btn btn-primary" type="submit">Add New Customer</button>
+		<button id="addCustomerSubmitButton" ng-click='createCustomer()' class="btn btn-primary" type="submit">Add New Customer</button>
 	</form>
 </div>
