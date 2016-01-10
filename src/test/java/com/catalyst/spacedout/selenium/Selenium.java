@@ -74,6 +74,17 @@ private WebDriver driver;
 				.isDisplayed());
 	}
 	
+	@Test
+	public void deletePassTestValid(){
+		new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("navbarDeleteButton"))).click();
+		
+		new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("deletePassInput"))).sendKeys("1");
+		driver.findElement(By.id("deletePassSubmitButton")).click();
+		
+		assertTrue(new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.className("toast-success")))
+				.isDisplayed());
+	}
+	
 	@After
 	public void closeDriver(){
 		driver.close();
