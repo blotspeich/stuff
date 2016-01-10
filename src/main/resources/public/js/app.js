@@ -1,2 +1,2 @@
 'use strict';
-	angular.module('spacedOut', ['ui.router', 'ui.bootstrap', 'xeditable']);
+	angular.module('spacedOut', ['ui.router', 'ui.bootstrap']);
