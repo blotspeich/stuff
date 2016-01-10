@@ -3,7 +3,7 @@ angular.module('spacedOut')
 .config(['$stateProvider', '$urlRouterProvider', 
   function($stateProvider, $urlRouterProvider){
 
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/viewPasses');
 
 	$stateProvider.state('viewPasses', {
 		url: '/viewPasses', 

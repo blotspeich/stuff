@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('spacedOut').controller('viewPassesController', ['$scope', 'monthlyPassFactory', 'customerFactory', 'vehicleFactory', 
-function($scope, monthlyPassFactory, customerFactory, vehicleFactory){
+angular.module('spacedOut').controller('viewPassesController', ['$scope' , 'toastr', 'monthlyPassFactory', 'customerFactory', 'vehicleFactory', 
+function($scope, toastr, monthlyPassFactory, customerFactory, vehicleFactory){
 	
 	$scope.getPassList = function(){
 		monthlyPassFactory.getMonthlyPasses().then(

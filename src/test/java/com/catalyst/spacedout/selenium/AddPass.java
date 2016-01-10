@@ -38,23 +38,9 @@ private WebDriver driver;
 		driver.findElement(By.id("expirationInput")).sendKeys("02/16/2016");
 		driver.findElement(By.id("addPassSubmitButton")).click();
 		
-		new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("navbarViewButton"))).click();
+		assertTrue(new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.className("toast-success")))
+				.isDisplayed());
 		
-		new WebDriverWait(driver, 3000).until(new ExpectedCondition<Boolean>(){
-			public Boolean apply(WebDriver d) {
-				return d.findElement(By.id("Current_Passes")).getAttribute("value").equals("Current Passes");
-			}
-		});
-		
-		boolean passIsPresent = false;
-		List<WebElement> passes = new ArrayList<>();
-		passes.addAll(driver.findElements(By.className("ng-binding")));
-		for(int i=0; i<passes.size(); i++){
-			if(passes.get(i).getAttribute("value").equals("33.99")){
-				passIsPresent = true;
-			}
-		}
-		assertTrue(passIsPresent);
 	}
 	
 	@After

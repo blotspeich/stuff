@@ -28,4 +28,10 @@ public class VehicleServiceImplTest {
 		target.addVehicle(vehicle);
 		verify(mockVehicleDao, times(1)).addVehicle(vehicle);
 	}
+	
+	@Test
+	public void testDeleteVehicle(){
+		target.deleteVehicle(1);
+		verify(mockVehicleDao, times(1)).deleteVehicle(1);
+	}
 }

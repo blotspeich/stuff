@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyPassFactory', 'customerFactory', 'vehicleFactory',
-	function($scope, monthlyPassFactory, customerFactory, vehicleFactory){
+angular.module('spacedOut').controller('addPassController', ['$scope', 'toastr', 'monthlyPassFactory', 'customerFactory', 'vehicleFactory',
+	function($scope, toastr, monthlyPassFactory, customerFactory, vehicleFactory){
 		
 	$scope.monthlyPass = {};
 	$scope.monthlyPass.passPrice = '';
@@ -16,9 +16,11 @@ angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyP
 		monthlyPassFactory.addMonthlyPass($scope.data).then(
 				function(success) {
 					$scope.result = success;
+					toastr.success('Monthly Pass Added')
 					
 				}, function(error) {
 					$scope.result = error;
+					toastr.error('Invalid entry');
 				});
 		};
 		
@@ -33,9 +35,11 @@ angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyP
 		customerFactory.addCustomer($scope.data).then(
 				function(success) {
 					$scope.result = success;
+					toastr.success('Customer Added')
 					
 				}, function(error) {
 					$scope.result = error;
+					toastr.error('Invalid entry');
 				});
 		};
 		
@@ -51,9 +55,11 @@ angular.module('spacedOut').controller('addPassController', ['$scope', 'monthlyP
 			vehicleFactory.addVehicle($scope.data).then(
 					function(success) {
 						$scope.result = success;
+						toastr.success('Vehicle Added')
 						
 					}, function(error) {
 						$scope.result = error;
+						toastr.error('Invalid entry');
 					});
 			};
 	
