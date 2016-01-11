@@ -1,16 +1,55 @@
 <div class="pull-left">
-	<form name ="addPassForm">
-		<input type="text" ng-model="monthlyPass.passPrice" placeholder="Enter Pass Price"/>
+	<form name ="editPassForm">
+		<select class="form-control" required ng-model="monthlyPass" ng-options="monthlyPass.passId for monthlyPass in monthlyPasses" id="passIdDropdown">
+			<option class="passIdDropdown" value="" selected  disabled hidden> Select Pass to update</option>
+		</select>
 		<br />
-		<input type="text" ng-model="monthlyPass.customer.customerId" placeholder="Enter Customer ID"/>
+		<input id="priceInput" type="text" ng-model="monthlyPass.passPrice" placeholder="Enter Pass Price"/>
 		<br />
-		<button ng-click='createMonthlyPass()' class="btn btn-primary" type="submit">Add Pass</button>
+		<input id="vehicleIdInput" type="text" ng-model="monthlyPass.vehicle.vehicleId" placeholder="Enter Vehicle Id" />
+		<br />
+		<input id="customerIdInput" type="text" ng-model="monthlyPass.customer.customerId" placeholder="Enter Customer ID"/>
+		<br />
+		<input id="expirationInput" type="text" ng-model="monthlyPass.expirationDate" placeholder="Enter Expiration Date"/>
+		<br />
+		<button id="editPassSubmitButton" ng-click='editMonthlyPass()' class="btn btn-primary" type="submit">Edit Pass</button>
 	</form>
 </div>
+
 <div class="pull-right">
-	<form name ="addCustomerForm">
-		<input type="text" ng-model="customer.firstName" placeholder="Enter First Name"/>
+	<form name ="editVehicleForm">
+		<select class="form-control" required ng-model="vehicle" ng-options="vehicle.vehicleId for vehicle in vehicles" id="vehicleIdDropdown">
+			<option class="vehicleIdDropdown" value="" selected disabled hidden> Select Vehicle to update</option>
+		</select>
+		<br />
+		<input id="makeInput" type="text" ng-model="vehicle.vehicleMake" placeholder="Enter Vehicle Make"/>
 		<br />	
-		<button ng-click='createCustomer()' class="btn btn-primary" type="submit">Add New Customer</button>
+		<input id="modelInput" type="text" ng-model="vehicle.vehicleModel" placeholder="Enter Vehicle Model"/>
+		<br />
+		<input id ="licenseNumberInput" type="text" ng-model="vehicle.licenseNumber" placeholder="Enter License Number"/>
+		<br />
+		<input id = "licenseStateInput" type="text" ng-model="vehicle.licenseState" placeholder="Enter License State"/>
+		<br />
+		<input id = "colorInput" type="text" ng-model="vehicle.vehicleColor" placeholder="Enter Vehicle Color"/>
+		<br />
+		<button id = "editVehicleSubmitButton" ng-click='editVehicle()' class="btn btn-primary" type="submit">Edit Vehicle</button>
+	</form>
+</div>
+
+<div class="pull-right">
+	<form name ="editCustomerForm">
+		<select class="form-control" required ng-model="customer" ng-options="customer.customerId for customer in customers" id="customerIdDropdown">
+			<option class="customerIdDropdown" value="" selected disabled hidden> Select Customer to update</option>
+		</select>
+		<br />
+		<input id="firstNameInput" type="text" ng-model="customer.firstName" placeholder="Enter First Name"/>
+		<br />
+		<input id="lastNameInput" type="text" ng-model="customer.lastName" placeholder="Enter Last Name"/>
+		<br />	
+		<input id="phoneNumberInput" type="text" ng-model="customer.phoneNumber" placeholder="Enter Phone Number"/>
+		<br />
+		<input id="emailInput" type="tet" ng-model="customer.emailAddress" placeholder="Enter Email Address"/>
+		<br />
+		<button id="editCustomerSubmitButton" ng-click='editCustomer()' class="btn btn-primary" type="submit">Edit Customer</button>
 	</form>
 </div>

@@ -8,6 +8,9 @@ angular.module('spacedOut').factory('vehicleFactory', ['$http', function($http) 
 		},
 		addVehicle : function(vehicle) {
 			return $http.post('/vehicle', vehicle);
+		},
+		editVehicle: function(vehicle) {
+			return $http.put("vehicle", vehicle);
 		}
 	}
 }])
