@@ -1,7 +1,7 @@
 <div class="pull-left">
 	<form name ="editPassForm">
-		<select class="form-control" required ng-model="monthlyPass" ng-options="monthlyPass.passId for monthlyPass in monthlyPasses" id="passIdDropdown">
-			<option class="passIdDropdown" value="" selected  disabled hidden> Select Pass to update</option>
+		<select class="form-control" required ng-model="monthlyPass" ng-options="monthlyPass.passId for monthlyPass in passList" id="passIdDropdown">
+			<option class="passIdDropdown" ng-model="monthlyPass.passId" value="" selected hidden> Select Pass to update</option>
 		</select>
 		<br />
 		<input id="priceInput" type="text" ng-model="monthlyPass.passPrice" placeholder="Enter Pass Price"/>

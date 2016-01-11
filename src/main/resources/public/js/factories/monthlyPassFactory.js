@@ -13,7 +13,7 @@ angular.module('spacedOut').factory('monthlyPassFactory', ['$http', function($ht
 			return $http.delete('/monthlyPass/' + passId);
 		},
 		editMonthlyPass: function(monthlyPass) {
-			return $http.put("monthlyPass", monthlyPass);
+			return $http.put("/monthlyPass/" + monthlyPass.passId , monthlyPass);
 		}
 	}
 }]);
